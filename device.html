@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device — IFEI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">IFEI</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="science.html">Science</a></li>
+        <li><a href="device.html" class="active">Device</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank">GitHub ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">Hardware</span>
+      <h1>The Device</h1>
+      <p>A sub-$50 solar-powered sensor unit deployable by anyone, anywhere along a shoreline — no dock access, no infrastructure required.</p>
+    </div>
+  </div>
+
+  <section class="device-overview">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Design Philosophy</h2>
+          <p>Every design decision is driven by three constraints: cost, deployability, and maintainability. A sensor that requires a technician to service it won't scale. Ours can be serviced by anyone who can pull a stake out of the ground.</p>
+          <div class="design-principles">
+            <div class="principle">
+              <span class="mono-label">Cost</span>
+              <p>Target bill of materials under $50 per unit. Mass produceable. Replicable by any school, watershed group, or park district.</p>
+            </div>
+            <div class="principle">
+              <span class="mono-label">Deployment</span>
+              <p>Ground spike into any shoreline. No dock access, no permanent installation, no permits for the hardware itself. One person, five minutes.</p>
+            </div>
+            <div class="principle">
+              <span class="mono-label">Maintenance</span>
+              <p>Monthly SD card swap during a regular site visit. Clean the probe. Done. No wireless infrastructure to manage.</p>
+            </div>
+          </div>
+        </div>
+        <div class="device-bom">
+          <span class="mono-label">Bill of Materials</span>
+          <table class="bom-table">
+            <tr><td>ESP32 microcontroller</td><td class="price">~$6</td></tr>
+            <tr><td>SD card module + card</td><td class="price">~$3</td></tr>
+            <tr><td>LiPo battery 3000mAh</td><td class="price">~$5</td></tr>
+            <tr><td>TP4056 charge module</td><td class="price">~$1</td></tr>
+            <tr><td>6v solar panel</td><td class="price">~$6</td></tr>
+            <tr><td>Conductivity probe</td><td class="price">~$4</td></tr>
+            <tr><td>Turbidity sensor</td><td class="price">~$4</td></tr>
+            <tr><td>Polycarbonate sphere housing</td><td class="price">~$8</td></tr>
+            <tr><td>Spike + PVC enclosure</td><td class="price">~$4</td></tr>
+            <tr><td>Cable, connectors, misc</td><td class="price">~$5</td></tr>
+            <tr class="bom-total"><td>Total</td><td class="price">~$46</td></tr>
+          </table>
+          <p class="bom-note">Final BOM subject to change based on partner metric requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--blue);">
+    <div class="container">
+      <h2>System Architecture</h2>
+      <div class="arch-grid">
+        <div class="arch-block">
+          <span class="arch-num">1</span>
+          <h4>Ground Spike</h4>
+          <p>PVC or metal spike driven into the shoreline. Houses the ESP32 microcontroller, SD card module, LiPo battery, and charge controller in a sealed weatherproof enclosure. Solar panel mounts to the top, facing skyward.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-block">
+          <span class="arch-num">2</span>
+          <h4>Tether Cable</h4>
+          <p>Thin 4-conductor waterproof cable runs from the spike to the water. Bright colored for visibility. Staked to the ground with tent pegs. Length determines sensor depth — marked with a zip tie for consistent deployment.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-block">
+          <span class="arch-num">3</span>
+          <h4>Sensor Sphere</h4>
+          <p>Polycarbonate sphere, openable at the equator, weighted to sink to a fixed depth below the surface. Sensor probes mount through the top hemisphere. No electronics in the water — just the probes themselves.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-block">
+          <span class="arch-num">4</span>
+          <h4>Data Collection</h4>
+          <p>ESP32 wakes every 15–30 minutes, reads all sensors, timestamps and logs to SD card, returns to deep sleep. Monthly site visit: pull the spike, swap the SD card, clean the probe, redeploy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="device-probe">
+    <div class="container">
+      <h2>Conductivity Probe</h2>
+      <div class="two-col">
+        <div>
+          <p>The conductivity probe uses two stainless steel 316-grade electrodes at a fixed, known distance apart. A small AC voltage is applied between the electrodes. The resulting current is measured and used to calculate conductivity.</p>
+          <p>AC excitation (rather than DC) prevents electrolysis — the primary cause of electrode degradation and reading drift in cheap DIY probes. The fixed electrode spacing defines the cell constant, a calibration factor that converts raw current measurements into conductivity units (µS/cm).</p>
+          <h4>Calibration</h4>
+          <p>One-point calibration using a reference solution of known conductivity. Recalibrated monthly during SD card swap visits.</p>
+          <h4>Biofouling</h4>
+          <p>Algae and bacteria accumulate on electrode surfaces over time. 316 stainless steel resists fouling well. Probes are cleaned during monthly maintenance visits — conveniently timed with SD card retrieval.</p>
+        </div>
+        <div class="probe-specs">
+          <div class="spec-block">
+            <span class="mono-label">Electrode material</span>
+            <p>316 stainless steel</p>
+          </div>
+          <div class="spec-block">
+            <span class="mono-label">Excitation</span>
+            <p>AC signal (prevents electrolysis)</p>
+          </div>
+          <div class="spec-block">
+            <span class="mono-label">Output</span>
+            <p>µS/cm (microsiemens per centimeter)</p>
+          </div>
+          <div class="spec-block">
+            <span class="mono-label">Calibration</span>
+            <p>Monthly, single-point</p>
+          </div>
+          <div class="spec-block">
+            <span class="mono-label">Schematic</span>
+            <p class="skeleton-text">Available on GitHub — firmware and hardware files coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="device-firmware" style="background: var(--blue);">
+    <div class="container">
+      <h2>Firmware & Schematics</h2>
+      <div class="notice-block">
+        <span class="mono-label">Coming Soon</span>
+        <p>Full firmware source code, wiring schematics, PCB layout, and assembly instructions will be published to GitHub once the prototype is complete. All files will be released under an open source license.</p>
+      </div>
+      <a href="https://github.com/IllinoisFisheryEcosystemInitiative" target="_blank" class="btn" style="margin-top: 2rem; display: inline-block;">View GitHub Repository ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo">IFEI</span>
+        <p>Illinois Fishery Ecosystem Initiative · Buffalo Grove, IL</p>
+        <a href="mailto:avitej.akula@gmail.com">avitej.akula@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
