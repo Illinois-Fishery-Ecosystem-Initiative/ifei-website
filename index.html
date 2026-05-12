@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illinois Fishery Ecosystem Initiative</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">IFEI</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="https://github.com" target="_blank">Data ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Northern Illinois</span>
+      <h1>Illinois Fishery<br>Ecosystem<br>Initiative</h1>
+      <p class="hero-sub">Deploying open-source water quality sensors across Northern Illinois lakes to generate the continuous data our ecosystems need.</p>
+      <a href="partnerships.html" class="btn">Our Partnerships →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="sensor-diagram">
+        <div class="spike-label">Ground spike</div>
+        <div class="spike-unit">
+          <div class="solar"></div>
+          <div class="enclosure">
+            <span>ESP32</span>
+            <span>SD</span>
+          </div>
+          <div class="wire"></div>
+        </div>
+        <div class="water-surface"></div>
+        <div class="probe-wrap">
+          <div class="tether"></div>
+          <div class="sphere">
+            <div class="electrode"></div>
+            <div class="electrode"></div>
+          </div>
+        </div>
+        <div class="probe-label">Conductivity + turbidity probe</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="mission">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-block">
+          <span class="num">01</span>
+          <h3>The Problem</h3>
+          <p>Harmful algal blooms close Northern Illinois lakes every summer. Park districts lack the continuous data needed to predict or prevent them — most monitoring is done quarterly at best.</p>
+        </div>
+        <div class="mission-block">
+          <span class="num">02</span>
+          <h3>Our Approach</h3>
+          <p>We build and deploy low-cost conductivity and turbidity sensors in partnership with local park districts, generating 24/7 data that captures events no quarterly sample ever could.</p>
+        </div>
+        <div class="mission-block">
+          <span class="num">03</span>
+          <h3>Open Science</h3>
+          <p>All data, firmware, and hardware schematics are published openly on GitHub. Any community can replicate our methodology. We build for the commons, not for profit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="container">
+      <h2>What We Measure</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">⚡</div>
+          <h4>Conductivity</h4>
+          <p>Tracks dissolved ions in water — a direct indicator of road salt runoff, nutrient loading, and invasive species risk. Zebra mussels require conductivity above 150 µS/cm to survive.</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">◎</div>
+          <h4>Turbidity</h4>
+          <p>Measures water clarity through light scattering. Combined with conductivity, turbidity fingerprints pollution event types and provides early warning of algal bloom onset.</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">▲</div>
+          <h4>Continuous Logging</h4>
+          <p>Our sensors log every 15–30 minutes, 24 hours a day. A conductivity spike at 3am after a rainstorm — invisible to quarterly sampling — is captured automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <h2>Founded By</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <h4>Avitej Akula</h4>
+          <p class="role">Co-Founder</p>
+          <p>Junior at Adlai E. Stevenson High School. NASA environmental researcher. Published in remote sensing and environmental data analysis.</p>
+        </div>
+        <div class="team-card">
+          <h4>Aarav Kulkarni</h4>
+          <p class="role">Co-Founder</p>
+          <p>Hands-on electrical, mechanical, and soldering experience. Hardware design and sensor fabrication lead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo">IFEI</span>
+        <p>Illinois Fishery Ecosystem Initiative · Buffalo Grove, IL</p>
+        <a href="mailto:avitej.akula@gmail.com">avitej.akula@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
