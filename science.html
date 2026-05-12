@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science — IFEI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">IFEI</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="science.html" class="active">Science</a></li>
+        <li><a href="device.html">Device</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank">GitHub ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">Methodology</span>
+      <h1>The Science</h1>
+      <p>What we measure, why it matters, and how it connects to the health of Northern Illinois lakes.</p>
+    </div>
+  </div>
+
+  <section class="science-note">
+    <div class="container">
+      <div class="notice-block">
+        <span class="mono-label">Note</span>
+        <p>The metrics below reflect our current technical direction. Final sensor selection will be determined in partnership with the organizations managing these lakes — we build what's actually useful, not what we assume is needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="science-metrics">
+    <div class="container">
+      <div class="science-block">
+        <div class="science-header">
+          <span class="num">01</span>
+          <h2>Water Conductivity</h2>
+          <span class="tag">Current target metric</span>
+        </div>
+        <div class="science-body">
+          <div class="science-text">
+            <p>Conductivity measures how well water conducts electricity — a direct function of how many dissolved ions are present. Every salt, mineral, and pollutant that enters a lake changes its conductivity signature.</p>
+            <h4>What conductivity predicts</h4>
+            <ul>
+              <li>Road salt runoff events — conductivity spikes sharply within hours of salt reaching the lake, a major and underdocumented issue in Northern Illinois winters</li>
+              <li>Storm runoff intensity — sudden drops indicate large freshwater influx, spikes indicate nutrient and ion loading</li>
+              <li>Invasive species risk — zebra mussels cannot establish below 150 µS/cm, making conductivity a direct early warning metric</li>
+              <li>Algal bloom conditions — elevated ions fuel cyanobacteria growth</li>
+              <li>Long-term urbanization impact — conductivity rises steadily as impervious surfaces increase in a watershed</li>
+            </ul>
+            <h4>The cascade nobody talks about</h4>
+            <p>Road salt raises conductivity → Daphnia populations crash → algae blooms explode unchecked → oxygen crashes overnight → fish kills → ecosystem collapse. That full sequence is detectable and predictable from continuous conductivity data alone.</p>
+          </div>
+          <div class="science-aside">
+            <div class="threshold-card">
+              <span class="mono-label">Key threshold</span>
+              <div class="threshold-num">150 µS/cm</div>
+              <p>Minimum conductivity required for zebra mussel establishment. Lakes above this threshold are at active invasion risk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-block">
+        <div class="science-header">
+          <span class="num">02</span>
+          <h2>Turbidity</h2>
+          <span class="tag">Current target metric</span>
+        </div>
+        <div class="science-body">
+          <div class="science-text">
+            <p>Turbidity measures water clarity by quantifying how much light scatters through suspended particles. Sediment, algae, bacteria, and pollution all increase turbidity.</p>
+            <h4>What turbidity reveals</h4>
+            <ul>
+              <li>Sediment disturbance from storms, boat traffic, or shoreline erosion</li>
+              <li>Algal bloom onset and progression — turbidity drops as a bloom starts (cyanobacteria are transparent), then spikes as the bloom peaks and dies</li>
+              <li>Zebra mussel presence — they filter water so efficiently that infested lakes become unnaturally clear</li>
+              <li>Post-storm recovery rates</li>
+            </ul>
+            <h4>Combined with conductivity</h4>
+            <p>The two metrics together fingerprint event types that neither reveals alone. High conductivity with no turbidity change suggests road salt. High conductivity with high turbidity suggests fertilizer runoff. High conductivity with dropping turbidity suggests zebra mussel activity.</p>
+          </div>
+          <div class="science-aside">
+            <div class="threshold-card">
+              <span class="mono-label">Key insight</span>
+              <div class="threshold-num" style="font-size: 1.4rem; padding: 0.5rem 0;">Two metrics, one story</div>
+              <p>Conductivity tells you what's dissolved in the water. Turbidity tells you what's suspended in it. Together they tell you what's happening.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-block skeleton-block">
+        <div class="science-header">
+          <span class="num">03</span>
+          <h2>Additional Metrics</h2>
+          <span class="tag pending-tag">To be determined with partners</span>
+        </div>
+        <div class="notice-block">
+          <span class="mono-label">Pending</span>
+          <p>We are currently in discussion with partner organizations about which additional metrics would be most valuable to their conservation work. This section will be updated following our initial partnership meetings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--blue); padding: 5rem 0;">
+    <div class="container">
+      <h2>Why Continuous Data</h2>
+      <div class="continuous-grid">
+        <div class="continuous-item">
+          <span class="mono-label">Traditional monitoring</span>
+          <p>Quarterly manual sampling. A technician visits the lake four times a year and collects a single data point. Everything that happens between visits — storm events, overnight oxygen crashes, seasonal transitions — goes completely unrecorded.</p>
+        </div>
+        <div class="continuous-arrow">→</div>
+        <div class="continuous-item">
+          <span class="mono-label">IFEI monitoring</span>
+          <p>A reading every 15–30 minutes, 24 hours a day, 365 days a year. A conductivity spike at 3am after a rainstorm. A turbidity drop over three days as a bloom clears. A seasonal conductivity rise as road salt accumulates through winter. All captured automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo">IFEI</span>
+        <p>Illinois Fishery Ecosystem Initiative · Buffalo Grove, IL</p>
+        <a href="mailto:avitej.akula@gmail.com">avitej.akula@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
