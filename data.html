@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data — IFEI</title>
+  <title>Data | IFEI</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="logo">IFEI</a>
+      <a href="index.html" class="logo">
+        <img class="logo-mark" src="images/ifeilogo.png" alt="">
+        <span class="logo-word">IFEI</span>
+      </a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -20,7 +24,7 @@
         <li><a href="data.html" class="active">Data</a></li>
         <li><a href="partnerships.html">Partnerships</a></li>
         <li><a href="updates.html">Updates</a></li>
-        <li><a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank">GitHub ↗</a></li>
+        <li><a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank">GitHub</a></li>
       </ul>
     </div>
   </nav>
@@ -36,10 +40,10 @@
   <section class="data-status">
     <div class="container">
       <div class="notice-block large">
-        <span class="mono-label">Status — Pre-Deployment</span>
+        <span class="mono-label">Status: pre-deployment</span>
         <p>IFEI is currently in the prototype and partnership phase. Sensor deployment is planned for summer 2026. Data will appear here as soon as our first units are in the water.</p>
         <p style="margin-top: 1rem; opacity: 0.6; font-size: 0.9rem;">In the meantime, all methodology documentation and firmware is available on GitHub.</p>
-        <a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank" class="btn" style="margin-top: 1.5rem; display: inline-block;">View GitHub ↗</a>
+        <a href="https://github.com/Illinois-Fishery-Ecosystem-Initiative/ifei-data" target="_blank" class="btn" style="margin-top: 1.5rem; display: inline-block;">View the GitHub repository</a>
       </div>
     </div>
   </section>
@@ -47,16 +51,16 @@
   <section style="background: var(--blue);">
     <div class="container">
       <h2>Monitored Lakes</h2>
-      <p style="opacity: 0.7; margin-bottom: 3rem; font-style: italic;">Deployment locations are being finalized with partner organizations. Lakes will appear here once sensors are deployed.</p>
+      <p style="margin-bottom: 3rem;">Deployment locations are being finalized with partner organizations. Lakes will appear here once sensors are deployed.</p>
       <div class="lakes-grid">
         <div class="lake-card skeleton-card">
           <span class="mono-label">Pending deployment</span>
           <h4>Lake name</h4>
           <p>Partner organization · Location</p>
           <div class="lake-stats">
-            <div class="lake-stat"><span>—</span><label>Days active</label></div>
-            <div class="lake-stat"><span>—</span><label>Readings</label></div>
-            <div class="lake-stat"><span>—</span><label>Avg conductivity</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Days active</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Readings</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Avg conductivity</label></div>
           </div>
         </div>
         <div class="lake-card skeleton-card">
@@ -64,9 +68,9 @@
           <h4>Lake name</h4>
           <p>Partner organization · Location</p>
           <div class="lake-stats">
-            <div class="lake-stat"><span>—</span><label>Days active</label></div>
-            <div class="lake-stat"><span>—</span><label>Readings</label></div>
-            <div class="lake-stat"><span>—</span><label>Avg conductivity</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Days active</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Readings</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Avg conductivity</label></div>
           </div>
         </div>
         <div class="lake-card skeleton-card">
@@ -74,9 +78,9 @@
           <h4>Lake name</h4>
           <p>Partner organization · Location</p>
           <div class="lake-stats">
-            <div class="lake-stat"><span>—</span><label>Days active</label></div>
-            <div class="lake-stat"><span>—</span><label>Readings</label></div>
-            <div class="lake-stat"><span>—</span><label>Avg conductivity</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Days active</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Readings</label></div>
+            <div class="lake-stat"><span class="stat-empty">n/a</span><label>Avg conductivity</label></div>
           </div>
         </div>
       </div>
@@ -91,7 +95,7 @@
           <span class="mono-label">Raw CSV</span>
           <h4>Download</h4>
           <p>All raw sensor data available as timestamped CSV files on GitHub. One file per lake per deployment period.</p>
-          <a href="https://github.com/IllinoisFisheryEcosystemInitiative" target="_blank" class="link-arrow">GitHub ↗</a>
+          <a href="https://github.com/IllinoisFisheryEcosystemInitiative" target="_blank" class="link-arrow">Open on GitHub</a>
         </div>
         <div class="access-card">
           <span class="mono-label">Visualizations</span>
@@ -102,7 +106,7 @@
         <div class="access-card">
           <span class="mono-label">License</span>
           <h4>Open</h4>
-          <p>All IFEI data is released under Creative Commons CC0 — no restrictions, no attribution required. Use it however you want.</p>
+          <p>All IFEI data is released under Creative Commons CC0: no restrictions, no attribution required. Use it however you want.</p>
         </div>
       </div>
     </div>
@@ -111,9 +115,15 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span class="logo">IFEI</span>
+        <span class="logo">
+          <img class="logo-mark" src="images/ifeilogo.png" alt="">
+          <span class="logo-word">IFEI</span>
+        </span>
         <p>Illinois Fishery Ecosystem Initiative · Buffalo Grove, IL</p>
+        <br>
+        <a href="mailto:ifei.email@gmail.com">ifei.email@gmail.com</a>
         <a href="mailto:avitej.akula@gmail.com">avitej.akula@gmail.com</a>
+        <a href="mailto:akulkar2010@gmail.com">akulkar2010@gmail.com</a>
       </div>
     </div>
   </footer>
