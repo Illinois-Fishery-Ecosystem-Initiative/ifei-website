@@ -183,6 +183,22 @@ nav ul a.active {
   font-weight: 700;
 }
 
+nav ul a.nav-donate {
+  margin: 0.9rem 1.5rem 0;
+  padding: 0.62rem 1rem;
+  background: var(--steel);
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--forest-deep);
+}
+
+nav ul a.nav-donate:hover {
+  background: var(--steel-ink);
+  padding-left: 1rem;
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -1452,6 +1468,14 @@ section[style*="--blue"] .notice-block p { color: var(--paper); }
   }
 
   nav ul a:hover { padding-left: 0.7rem; }
+
+  nav ul a.nav-donate {
+    margin: 0 0 0 0.35rem;
+    padding: 0.3rem 0.8rem;
+    box-shadow: 2px 2px 0 var(--forest-deep);
+  }
+
+  nav ul a.nav-donate:hover { padding-left: 0.8rem; }
 
   .hero-lake { min-height: 78vh; }
 
